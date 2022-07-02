@@ -3,22 +3,19 @@ class Sample
 {
     public static void main(String args[])
     {
+        int n,i,x[];
         Scanner sc=new Scanner(System.in);
-        int n,a[],i;
-        int odd=0;
         n=sc.nextInt();
-        a=new int[n];
+        x=new int[n];
         for(i=0;i<n;i++)
+        x[i]=sc.nextInt();
+        for(i=n-1;i>=0;i--)
         {
-            a[i]=sc.nextInt();
-        }
-        for(i=0;i<n;i++)
-        {
-            if(a[i]%2!=0)
+            if(x[i]%2==1)
             {
-                odd=i;
+                System.out.println(i);
+                break;
             }
         }
-        System.out.printf("%d",odd);
     }
 }
